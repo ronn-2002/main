@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Aurel Yessy KOUMBA</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#1e40af',
+                        accent: '#ef4444',
+                        dark: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-primary to-secondary text-white py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center">
+                <div class="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-white shadow-lg mb-6 overflow-hidden">
+                    <img src="Photo.jpg" alt="Aurel Yessy KOUMBA" class="w-full h-full object-cover" />
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold mb-2 text-center">Aurel Yessy KOUMBA</h1>
+                <p class="text-lg md:text-xl font-light mb-4 text-center">Développeur Web & Génie Informatique</p>
+                <p class="text-center max-w-lg mb-6 px-4">
+                    Passionné de programmation et de résolution des problèmes d'algorithmique
+                </p>
+                <div class="flex space-x-4">
+                    <a href="mailto:aurelkoumba088@gmail.com" class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition-all">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/tonprofil" class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition-all">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/" class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition-all">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation - Mobile Menu -->
+    <div class="md:hidden bg-dark text-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="relative" x-data="{ open: false }">
+                <button @click="open = !open" class="flex items-center justify-between w-full py-3">
+                    <span class="font-medium">Menu</span>
+                    <i class="fas fa-bars text-lg"></i>
+                </button>
+                <div class="absolute left-0 right-0 z-50 bg-dark shadow-md" x-show="open" @click.away="open = false" style="display: none;">
+                    <ul>
+                        <li><a href="#about" class="block py-3 px-4 hover:bg-white hover:bg-opacity-10 transition-colors">À propos</a></li>
+                        <li><a href="#skills" class="block py-3 px-4 hover:bg-white hover:bg-opacity-10 transition-colors">Compétences</a></li>
+                        <li><a href="#projects" class="block py-3 px-4 hover:bg-white hover:bg-opacity-10 transition-colors">Projets</a></li>
+                        <li><a href="#experience" class="block py-3 px-4 hover:bg-white hover:bg-opacity-10 transition-colors">Expérience</a></li>
+                        <li><a href="#education" class="block py-3 px-4 hover:bg-white hover:bg-opacity-10 transition-colors">Formation</a></li>
+                        <li><a href="#contact" class="block py-3 px-4 hover:bg-white hover:bg-opacity-10 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation - Desktop -->
+    <nav class="hidden md:block bg-dark text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto">
+            <ul class="flex justify-center flex-wrap">
+                <li><a href="#about" class="block py-4 px-6 hover:bg-white hover:bg-opacity-10 transition-colors">À propos</a></li>
+                <li><a href="#skills" class="block py-4 px-6 hover:bg-white hover:bg-opacity-10 transition-colors">Compétences</a></li>
+                <li><a href="#projects" class="block py-4 px-6 hover:bg-white hover:bg-opacity-10 transition-colors">Projets</a></li>
+                <li><a href="#experience" class="block py-4 px-6 hover:bg-white hover:bg-opacity-10 transition-colors">Expérience</a></li>
+                <li><a href="#education" class="block py-4 px-6 hover:bg-white hover:bg-opacity-10 transition-colors">Formation</a></li>
+                <li><a href="#contact" class="block py-4 px-6 hover:bg-white hover:bg-opacity-10 transition-colors">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-dark inline-block relative pb-3 mb-4">
+                    À PROPOS
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
+                </h2>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white p-6 md:p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Mon Profil</h3>
+                    <p class="mb-6">
+                        Passionné de programmation, curieux et motivé, je cherche à développer mes compétences en développement web et résolution d'algorithmes. 
+                        Je me forme chaque jour pour devenir un développeur polyvalent, prêt à innover. Je code avec passion, j'apprends avec ambition, 
+                        et je rêve de contribuer à des projets innovants dans le monde du développement web et logiciel.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-lg font-semibold mb-3 text-secondary">Informations Personnelles</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <span class="text-primary mr-2"><i class="fas fa-envelope"></i></span>
+                                    <span>aurelkoumba088@gmail.com</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-primary mr-2"><i class="fas fa-phone"></i></span>
+                                    <span>+221 78 654 94 17</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-primary mr-2"><i class="fas fa-map-marker-alt"></i></span>
+                                    <span>Ouakam, Cité Avion</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-3 text-secondary">Qualités Personnelles</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <span class="text-primary mr-2"><i class="fas fa-check-circle"></i></span>
+                                    <span>Autonome et curieux</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-primary mr-2"><i class="fas fa-check-circle"></i></span>
+                                    <span>Capacité à travailler en équipe</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-primary mr-2"><i class="fas fa-check-circle"></i></span>
+                                    <span>Attentionné, toujours prêt à apprendre</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-primary mr-2"><i class="fas fa-check-circle"></i></span>
+                                    <span>Travail sous pression</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-12 md:py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-dark inline-block relative pb-3 mb-4">
+                    COMPÉTENCES
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Skill Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-4xl md:text-5xl text-primary text-center mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-center mb-4">Développement Front-end</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>HTML/CSS</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>JavaScript</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Responsive Design</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-4xl md:text-5xl text-primary text-center mb-4">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-center mb-4">Développement Back-end</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Python</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Java</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Base de données</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-4xl md:text-5xl text-primary text-center mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-center mb-4">Outils & Autres</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Git & GitHub</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Figma</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Algorithmique</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Languages -->
+            <div class="mt-12 max-w-3xl mx-auto">
+                <h3 class="text-xl font-semibold mb-6 text-center">Langues</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Français</span>
+                            <span>Langue Maternelle</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Anglais</span>
+                            <span>Niveau apprentissage</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-primary h-2 rounded-full" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-dark inline-block relative pb-3 mb-4">
+                    PROJETS
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gray-300">
+                        <img src="télécharger.jpeg" alt="Projet Figma" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2">Site Personnel - Figma</h3>
+                        <p class="text-gray-600 mb-4">
+                            Conception d'interfaces pour un site web personnel en utilisant Figma, 
+                            en appliquant les principes de l'UX/UI design.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Figma</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">UI/UX</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Design</span>
+                        </div>
+                        <a href="#" class="inline-block text-primary hover:underline font-medium">Voir le projet</a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gray-300">
+                        <img src="télécharger (1).jpeg" alt="Application Java" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2">Gestion de Bibliothèque Auto</h3>
+                        <p class="text-gray-600 mb-4">
+                            Application Java pour la gestion d'une bibliothèque automobile 
+                            développée avec Eclipse, utilisant POO et base de données.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Java</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Eclipse</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">POO</span>
+                        </div>
+                        <a href="#" class="inline-block text-primary hover:underline font-medium">Voir le projet</a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gray-300">
+                        <img src="
+                        télécharger (2).jpeg" alt="Application Python" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2">Gestion Pharmaceutique</h3>
+                        <p class="text-gray-600 mb-4">
+                            Application Python pour la gestion d'une pharmacie avec 
+                            un système d'authentification par clé d'activation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Python</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Base de données</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Backend</span>
+                        </div>
+                        <a href="#" class="inline-block text-primary hover:underline font-medium">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-12 md:py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-dark inline-block relative pb-3 mb-4">
+                    EXPÉRIENCE
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
+                </h2>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="relative pl-8 border-l-2 border-primary space-y-8 md:space-y-12">
+                    <!-- Experience 1 -->
+                    <div class="relative">
+                        <div class="absolute -left-10 top-0 w-6 h-6 bg-primary rounded-full border-4 border-white"></div>
+                        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+                            <div class="flex flex-wrap justify-between mb-2 gap-2">
+                                <h3 class="text-lg md:text-xl font-semibold text-primary">Développeur Web</h3>
+                                <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded text-sm">Freelance</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Création de sites web simples en HTML/CSS et utilisation de Python pour le backend.</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Développement des interfaces utilisateur avec HTML/CSS</li>
+                                <li>Intégration de fonctionnalités backend avec Python</li>
+                                <li>Déploiement et maintenance des sites web</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 2 -->
+                    <div class="relative">
+                        <div class="absolute -left-10 top-0 w-6 h-6 bg-primary rounded-full border-4 border-white"></div>
+                        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+                            <div class="flex flex-wrap justify-between mb-2 gap-2">
+                                <h3 class="text-lg md:text-xl font-semibold text-primary">Agent de Sécurité</h3>
+                                <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded text-sm">2023 - 2024</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Responsable de la sécurité et de la surveillance.</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Surveillance et contrôle d'accès</li>
+                                <li>Gestion des entrées et sorties</li>
+                                <li>Gestion des incidents durant les gardes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-dark inline-block relative pb-3 mb-4">
+                    FORMATION
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
+                </h2>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white p-6 md:p-8 rounded-lg shadow-md">
+                    <div class="flex flex-col md:flex-row md:items-center mb-6">
+                        <div class="text-3xl md:text-4xl text-primary mb-4 md:mb-0 md:mr-6 text-center md:text-left">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg md:text-xl font-semibold">Licence en Génie Informatique</h3>
+                            <p class="text-gray-600">Université Professionnelle | 2024-2025</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">
+                        Formation approfondie en informatique, incluant la programmation, 
+                        les algorithmes, les bases de données et le développement web.
+                    </p>
+                    <div class="bg-gray-100 p-4 rounded">
+                        <h4 class="font-medium mb-2">Compétences acquises:</h4>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <li class="flex items-center">
+                                <span class="text-primary mr-2"><i class="fas fa-check"></i></span>
+                                <span>Programmation orientée objet</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-primary mr-2"><i class="fas fa-check"></i></span>
+                                <span>Développement web</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-primary mr-2"><i class="fas fa-check"></i></span>
+                                <span>Algorithmique avancée</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-primary mr-2"><i class="fas fa-check"></i></span>
+                                <span>Bases de données</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 md:py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-dark inline-block relative pb-3 mb-4">
+                    CONTACT
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
+                </h2>
+            </div>
+            
+          <!-- Contact Section (Continuation) -->
+
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Contact Info -->
+                <div class="col-span-1">
+                    <div class="space-y-4 md:space-y-6">
+                        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-start">
+                            <div class="text-primary text-xl mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium mb-1">Email</h3>
+                                <p class="text-gray-600">aurelkoumba088@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-start">
+                            <div class="text-primary text-xl mr-4 mt-1">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium mb-1">Téléphone</h3>
+                                <p class="text-gray-600">+221 78 654 94 17</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md flex items-start">
+                            <div class="text-primary text-xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium mb-1">Adresse</h3>
+                                <p class="text-gray-600">Ouakam, Cité Avion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg md:text-xl font-semibold mb-4">Envoyez-moi un message</h3>
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Nom</label>
+                                    <input type="text" id="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Votre nom">
+                                </div>
+                                <div>
+                                    <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Email</label>
+                                    <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Votre email">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block mb-2 text-sm font-medium text-gray-700">Sujet</label>
+                                <input type="text" id="subject" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Sujet de votre message">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Votre message"></textarea>
+                            </div>
+                            <button type="submit" class="bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded transition-colors">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-6">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <p class="text-center md:text-left">© 2025 Aurel Yessy KOUMBA. Tous droits réservés.</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="mailto:aurelkoumba088@gmail.com" class="hover:text-primary transition-colors">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://linkedin.com/in/tonprofil" class="hover:text-primary transition-colors">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/" class="hover:text-primary transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" class="fixed bottom-6 right-6 bg-primary hover:bg-secondary text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all opacity-0 invisible">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Alpine.js for mobile menu -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js"></script>
+
+<!-- Back to Top Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('opacity-100');
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+            } else {
+                backToTopButton.classList.add('opacity-0');
+                backToTopButton.classList.remove('opacity-100');
+                setTimeout(() => {
+                    backToTopButton.classList.add('invisible');
+                }, 300);
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 60,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

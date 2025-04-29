@@ -1,0 +1,100 @@
+cody{
+    background-image: url('Photo.jpg'); /* ton image */
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain; /* ou cover si tu veux qu’elle remplisse */
+    background-attachment: fixed; /* optionnel pour un effet fixe */
+    background-color: #f0f0f0;  /* Couleur de fond */
+    color:#222;
+                
+    }
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+    width: 30%;
+    background-color: #0077cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-right: 1px solid #333;
+}
+
+a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+h1, h2, h3{
+    color: #90CAF9;
+    margin-bottom: 0.5rem
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar h1 {
+    font-size: 22px;
+    margin: 10px 0 5px;
+}
+
+header {
+    background-color: #2e86de;
+    color: white;
+    padding: 20px;
+    text-align: center;
+
+     }
+
+        section {
+            background-color: #e0f7fa;
+            color: #2a2a2a;
+            border-radius: 8px;
+        }
+        .centres-interet {
+            background-color:  #e0f7fa; /* orange pâle doux */
+            color: #2a2a2a;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+    
+
+.content ul {
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin-bottom: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #ccc;
+
+
+}
